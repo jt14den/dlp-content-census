@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1535080721449.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "44538952",
+    "id" : "3863B9A0",
+    "lastKnownWriteTime" : 1535153134,
+    "last_content_update" : 1535153134499,
+    "path" : "~/dlp/dpl-census.R",
+    "project_path" : "dpl-census.R",
+    "properties" : {
+        "cursorPosition" : "16,28",
+        "scrollLine" : "5",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
