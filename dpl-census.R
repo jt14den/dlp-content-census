@@ -6,6 +6,7 @@ library(tidyr)
 dlp_type_year <- read_csv('dlp-content-census.csv')
 dlp_durations <- read_csv('derv-durations.csv')
 dlp_billions <- read_csv('derv-billion.csv')
+dlp_top_level <- read_csv('top_level_tally.csv')
 
 glimpse(dlp_type_year)
 
@@ -45,7 +46,17 @@ dlp_billions %>%
   ggplot(aes(x=DerivedStats_numcount_billions, y = counts_billions, fill=year)) +
     geom_col(position = "dodge") +
     coord_flip() +
-    labs(y = "Counts in Billions", x = "Type", fill = "Year") +
+    labs(y = "Counts in Billions", x = "Type", fill = "Year", title="Derived Counts Estimated") +
     scale_fill_manual(values=uclaPalette) +
     theme_minimal()
-    
+
+dlp_top_level %>% 
+  gather(year, counts, -top_level_tally) %>% 
+  ggplot(aes(x=reorder(top_level_tally, counts), y = counts, fill = year)) +
+  geom_col(position = "dodge") +
+  coord_flip() +
+  labs(y = "Counts in Terabytes", x = "Type", fill = "Year", title="Top Level Tally") +
+  scale_fill_manual(values=uclaPalette) +
+  theme_minimal()
+  
+  
